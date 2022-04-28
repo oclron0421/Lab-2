@@ -1,3 +1,5 @@
+import statistics
+
 def display_main_menu():
     print("display_main_menu")
 
@@ -18,11 +20,12 @@ def calc_average_temperature(num=[]):
     average=total/num_of_elements
     print("The average value " + str(average))
 
-def calc_min_max_temperature(num):
+def calc_min_max_temperature(num=[]):
     print("The maximum value is " + str((max(num))))
     print("The minimum value is " + str((min(num))))
 
-
+def calc_median_temperature(num=[]):
+    print("The median value is: " + str(statistics.median(num)))
 
 
 def main():
@@ -31,6 +34,7 @@ def main():
     num_float = get_user_input()
     calc_average_temperature(num_float)
     calc_min_max_temperature(num_float)
+    calc_median_temperature(num_float)
 
 
 if __name__ == "__main__":
